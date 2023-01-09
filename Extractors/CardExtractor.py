@@ -26,10 +26,3 @@ def extract_cards_from_image(path: str):
         image_number += 1
 
     return card_array
-
-# for testing - showing the results
-# cv2.imshow('opening', opening)
-# cv2.imshow('thresh', thresh)
-# cv2.imshow('image', image)
-# cv2.imshow('1', card_array[0])
-# cv2.waitKey()
