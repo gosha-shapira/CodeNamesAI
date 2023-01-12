@@ -21,8 +21,8 @@ def extract_cards_from_image(path: str):
         x, y, w, h = cv2.boundingRect(c)
         cv2.rectangle(image, (x, y), (x + w, y + h), (36, 255, 12), 3)
         ROI = original[y:y + h, x:x + w]
+        cv2.imwrite("/Users/gosha/Development/PycharmProjects/CodeNamesAI/Extractors/extracted/ROI_{}.png".format(image_number), ROI)
         card_array.append(ROI)
-        # cv2.imwrite("extracted/ROI_{}.png".format(image_number), ROI)
         image_number += 1
 
     return card_array
